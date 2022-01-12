@@ -12,3 +12,12 @@ Make sure your composer and yarn binary directories are mapped on $PATH.
 
 This is a step-by-step tutorial. Instead of cloning this repository you will follow the guide to recreate it exploring 
 the functionalities used.       
+
+[Step1](https://github.com/kkobold/php-serverless/blob/main/docs/step-1.md) - Setting up your project
+
+[Step2](https://github.com/kkobold/php-serverless/blob/main/docs/step-2.md) - First Deploy
+
+[Step3](https://github.com/kkobold/php-serverless/blob/main/docs/step-3.md) - S3 Events
+
+[Step4](https://github.com/kkobold/php-serverless/blob/main/docs/step-4.md) - EventBridge Events
+

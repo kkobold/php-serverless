@@ -1,0 +1,16 @@
+{
+    "name": "kkobold/php-serverless",
+    "description": "A PHP serverless tutorial demo using Bref to run php code on AWS Lambda",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danilo Sabbagh",
+            "email": "sabbaghdanilo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bref/bref": "dev-master"
+    }
+}

@@ -1,0 +1,8 @@
+Resources:
+  s3UploadBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: ${self:custom.name}-${self:custom.stage}-bucket
+      NotificationConfiguration:
+        EventBridgeConfiguration:
+          EventBridgeEnabled: true

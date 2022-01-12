@@ -1,0 +1,7 @@
+/.idea
+/vendor
+/.serverless
+/node_modules
+/yarn.lock
+/package.json
+/composer.lock

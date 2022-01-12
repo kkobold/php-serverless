@@ -1,0 +1,62 @@
+service: app
+
+custom:
+    name: ${self:service}
+    stage: ${opt:stage, 'dev'}
+
+provider:
+    name: aws
+    region: us-east-1
+    runtime: provided.al2
+
+plugins:
+    - ./vendor/bref/bref
+
+functions:
+    api:
+        handler: index.php
+        description: ''
+        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        layers:
+            - ${bref:layer.php-80-fpm}
+        events:
+            -   httpApi: '*'
+    s3Function:
+        handler: events/s3/fileUploaded.php
+        description: 'A file was uploaded inside the upload directory'
+        layers:
+            - ${bref:layer.php-80}
+        events:
+            - s3:
+                  bucket: ${self:custom.name}-${self:custom.stage}-bucket
+                  event: s3:ObjectCreated:*
+                  existing: true
+                  rules:
+                      - prefix: uploads/
+                      - suffix: .csv
+    eventBridgeFunction:
+        handler: events/s3/fileRemoved.php
+        layers:
+            - ${bref:layer.php-80}
+        description: 'A file was removed from the bucket'
+        events:
+            - eventBridge:
+                  enabled: true
+                  pattern:
+                      source:
+                          - aws.s3
+                      detail-type:
+                          - "Object Deleted"
+                      detail:
+                          bucket:
+                              name:
+                                  - ${self:custom.name}-${self:custom.stage}-bucket
+
+# Exclude files from deployment
+package:
+    patterns:
+        - '!node_modules/**'
+        - '!tests/**'
+
+resources:
+    - ${file(resources/s3.yml)}
