@@ -1,18 +1,14 @@
-# Slim-Serverless
+# PHP-Serverless
 
-A PHP Slim Framework serverless demo using Bref
+A PHP serverless tutorial demo using [Bref](https://bref.sh/) to run php code on [AWS Lambda](https://aws.amazon.com/lambda/)
+
+### Requirements 
+
+In order to run this steps you need **bash**, **php**, and **yarn** installed on path. Also, this tutorial requires AWS cli credentials configured on homedir.
+
+Make sure your composer and yarn binary directories are mapped on $PATH.
 
 ### How to use it?
 
-This is a branched project with step-by-step instructions. You can execute the step by yourself or checkout the next 
-step after you note the changes. All you need to do is clone the project and move forward with the steps.  
-
-If you are having problems with one step you can simply do a ```git checkout tags/step-#``` in order to move on.
-
-When using this project it its ideal that after the git clone you also fetch all tags. 
-
-``git fetch --all --tags``
-
-
-
-
+This is a step-by-step tutorial. Instead of cloning this repository you will follow the guide to recreate it exploring 
+the functionalities used.       
