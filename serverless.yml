@@ -1,4 +1,4 @@
-service: app
+service: kkobold
 
 custom:
     name: ${self:service}
@@ -13,14 +13,16 @@ plugins:
     - ./vendor/bref/bref
 
 functions:
+
     api:
         handler: index.php
-        description: ''
-        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        description: 'API'
+        timeout: 28
         layers:
             - ${bref:layer.php-80-fpm}
         events:
             -   httpApi: '*'
+
     s3Function:
         handler: events/s3/fileUploaded.php
         description: 'A file was uploaded inside the upload directory'
@@ -34,6 +36,7 @@ functions:
                   rules:
                       - prefix: uploads/
                       - suffix: .csv
+
     eventBridgeFunction:
         handler: events/s3/fileRemoved.php
         layers:

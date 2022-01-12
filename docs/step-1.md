@@ -14,9 +14,9 @@ Initialize Project
 
 ``composer init``
 
-Require Bref
+Require Bref and Slim
 
-``composer require bref/bref "dev-master"``
+``composer require bref/bref slim/slim slim/psr7 slim/http``
 
 Install Serverless
 

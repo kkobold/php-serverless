@@ -11,6 +11,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "bref/bref": "dev-master"
+        "bref/bref": "dev-master",
+        "slim/slim": "4.x-dev",
+        "slim/psr7": "dev-master",
+        "slim/http": "dev-master"
     }
 }

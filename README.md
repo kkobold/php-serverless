@@ -21,3 +21,7 @@ the functionalities used.
 
 [Step4](https://github.com/kkobold/php-serverless/blob/main/docs/step-4.md) - EventBridge Events
 
+[Step5](https://github.com/kkobold/php-serverless/blob/main/docs/step-5.md) - HTTP API
+
+
+

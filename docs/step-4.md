@@ -62,3 +62,5 @@ This Event will carry teh pattern descrived on ``eventBridgeFunction``  so it wi
 Go to the [cloudwatch log group](https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups) and find the relevant log. It will be named ``/aws/lambda/SERVICE-dev-eventBridgeFunction``
 
 There you will find the json encoded ``event`` and ``context``
+
+move to [step-5](https://github.com/kkobold/php-serverless/blob/main/docs/step-5.md)
