@@ -41,4 +41,4 @@ Open [https://console.aws.amazon.com/apigateway/main/apis?region=us-east-1](http
 
 
 
-move to [step-3](https://github.com/kkobold/php-serverless/blob/start-step-3/docs/step-3.md)
+move to [step-3](https://github.com/kkobold/php-serverless/blob/main/docs/step-3.md)

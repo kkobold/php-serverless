@@ -81,4 +81,4 @@ Now go to the [cloudwatch log group](https://console.aws.amazon.com/cloudwatch/h
 
 There you will find the json encoded ``event`` and ``context``
 
-move to [step-4](https://github.com/kkobold/php-serverless/blob/start-step-4/docs/step-4.md)
+move to [step-4](https://github.com/kkobold/php-serverless/blob/main/docs/step-4.md)
